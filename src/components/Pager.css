@@ -1,0 +1,48 @@
+@value colorAction from '../colors.css';
+
+.btn {
+  color: colorAction;
+  background: white;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 31px;
+  padding: 0 10px;
+
+  cursor: pointer;
+}
+
+.page {
+  composes: btn;
+  min-width: 30px;
+}
+
+.pageDisabled {
+  composes: page;
+  color: #a7a7a7;
+}
+
+.page + .page {
+  margin: 0 0 0 5px;
+}
+
+.next {
+  composes: btn;
+}
+
+.pager {
+  display: flex;
+  margin: 0 0 32px 0;
+
+  font-size: 14px;
+
+  & > .pages {
+    margin: 0 0 0 auto;
+  }
+
+  & > .next {
+    margin: 0 0 0 11px;
+  }
+}

@@ -1,0 +1,56 @@
+@value cardWidth: 297px;
+@value cardHeight: 297px;
+@value colorAction, cardAttrsColor, cardDescriptionColor, cardBg from '../colors.css';
+
+.card {
+  width: cardWidth;
+  height: cardHeight;
+  padding: 17px 18px;
+
+  background: cardBg;
+
+  & > .title {
+    margin: 0 0 10px 0;
+  }
+
+  & > .attrs {
+    margin: 0 0 12px 0;
+  }
+}
+
+.title {
+  color: colorAction;
+
+  font-size: 18px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attrs {
+  line-height: 14px;
+}
+
+.attr {
+  color: cardAttrsColor;
+  font-size: 12px;
+}
+
+.attr + .attr::before {
+  content: '';
+  display: inline-block;
+
+  margin: 0 4px 0 8px;
+  width: 1px;
+  height: 11px;
+
+  background: cardAttrsColor;
+  position: relative;
+  top: 2px;
+}
+
+.descr {
+  font-size: 12px;
+  color: cardDescriptionColor;
+}

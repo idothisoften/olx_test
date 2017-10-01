@@ -1,0 +1,15 @@
+@value cardWidth from "./Card.css";
+
+@value cardsMarginV: 33px;
+@value cardsMarginH: 42px;
+
+.cards {
+  margin: calc(-1 * cardsMarginV) 0 0 calc(-1 * cardsMarginH);
+  padding: 0 0 32px 0;
+}
+
+.wrap {
+  margin: cardsMarginV 0 0 cardsMarginH;
+  display: inline-block;
+  vertical-align: top;
+}

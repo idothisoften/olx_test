@@ -1,28 +1,71 @@
-.App {
-  text-align: center;
+@value cardWidth from "./components/Card.css";
+@value cardsMarginH from "./components/Cards.css";
+@value mainBg, footerBg, footerBorder, logoShadow, logoBg from "./colors.css";
+
+html {
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  background: mainBg;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-title {
-  font-size: 1.5em;
+.page {
+  display: flex;
+  flex-flow: column nowrap;
+
+  min-height: 100vh;
 }
 
-.App-intro {
-  font-size: large;
+.header {
+  padding: 23px 0 46px 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.content {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.pagerWrap {
+  margin: auto 0 0 0;
+}
+
+.footer {
+  height: 84px;
+  background: footerBg;
+
+  border: 1px solid footerBorder;
+  border-left: 0;
+  border-right: 0;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 43px;
+
+  background: logoBg;
+  box-shadow: 0 0 5px logoShadow;
+}
+
+.header, .content {
+  width: cardWidth;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .header, .content {
+    width: calc(cardWidth * 2 + cardsMarginH)
+  }
+}
+
+@media (min-width: 992px) {
+  .header, .content {
+    width: calc(cardWidth * 3 + cardsMarginH * 2)
+  }
 }
