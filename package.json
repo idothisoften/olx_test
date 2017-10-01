@@ -2,6 +2,7 @@
   "name": "2017-10-01",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://idothisoften.github.io/olx/",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
